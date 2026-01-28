@@ -4,9 +4,118 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Campus Tech Help | Welcome</title>
+
     <link rel="stylesheet"
       href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+
+    <style>
+      :root{
+        --lsu-purple:#461D7C;
+        --lsu-gold:#FDD023;
+        --ink:#111;
+      }
+
+      /* LSU-ish background + subtle tiger stripes */
+      body{
+        background:
+          linear-gradient(135deg, rgba(70,29,124,0.06), rgba(253,208,35,0.06)),
+          repeating-linear-gradient(
+            115deg,
+            rgba(70,29,124,0.05) 0px,
+            rgba(70,29,124,0.05) 10px,
+            rgba(0,0,0,0.03) 10px,
+            rgba(0,0,0,0.03) 18px
+          );
+      }
+
+      /* Top bar */
+      .top-bar{
+        background: var(--lsu-purple);
+      }
+      .top-bar .menu, .top-bar .menu a{
+        background: transparent;
+        color: #fff;
+      }
+      .top-bar .menu a:hover{
+        color: var(--lsu-gold);
+      }
+      .menu-text{
+        font-weight: 700;
+        letter-spacing: .3px;
+      }
+
+      /* Hero */
+      .hero{
+        background:
+          linear-gradient(135deg, rgba(70,29,124,0.92), rgba(0,0,0,0.75)),
+          url("https://picsum.photos/id/1067/1600/900") center/cover no-repeat;
+        color: #fff;
+        margin-bottom: 1.5rem;
+      }
+      .hero .button.primary{
+        background: var(--lsu-gold);
+        color: var(--ink);
+        font-weight: 700;
+      }
+      .hero .button.hollow{
+        border-color: #fff;
+        color: #fff;
+      }
+      .hero .button.hollow:hover{
+        border-color: var(--lsu-gold);
+        color: var(--lsu-gold);
+      }
+
+      /* Section titles + accents */
+      h2, h3{
+        color: var(--lsu-purple);
+      }
+      .accent-bar{
+        height: 6px;
+        background: linear-gradient(90deg, var(--lsu-gold), var(--lsu-purple));
+        border-radius: 999px;
+        margin: 0.75rem 0 1rem;
+      }
+
+      /* Image cards */
+      .thumb{
+        border-radius: 14px;
+        overflow: hidden;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.10);
+        border: 3px solid rgba(70,29,124,0.12);
+      }
+      .thumb img{
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      /* Stats */
+      .stat{
+        color: var(--lsu-purple);
+      }
+      .stats-wrap{
+        border-radius: 16px;
+        background: rgba(255,255,255,0.75);
+        backdrop-filter: blur(6px);
+        padding: 0.75rem 0.25rem;
+        border: 1px solid rgba(70,29,124,0.12);
+      }
+
+      /* Footer */
+      .footer{
+        padding: 1.25rem 0;
+      }
+      .footer a{
+        color: var(--lsu-purple);
+        font-weight: 600;
+      }
+      .footer a:hover{
+        color: var(--lsu-gold);
+      }
+    </style>
   </head>
+
   <body>
 
     <!-- Start Top Bar -->
@@ -14,62 +123,93 @@
       <div class="top-bar-left">
         <ul class="menu">
           <li class="menu-text">Campus Tech Help</li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Pricing</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#pricing">Pricing</a></li>
         </ul>
       </div>
       <div class="top-bar-right">
         <ul class="menu">
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
     </div>
     <!-- End Top Bar -->
 
-    <div class="callout large">
+    <!-- Hero -->
+    <div class="callout large hero">
       <div class="row column text-center">
-        <h1>Tech Help for Busy Students</h1>
-        <p class="lead">
+        <h1 style="margin-bottom:.25rem;">Tech Help for Busy Students</h1>
+        <div class="accent-bar" style="max-width:420px; margin-left:auto; margin-right:auto;"></div>
+        <p class="lead" style="max-width:760px; margin:0 auto 1rem;">
           Wi-Fi setup, laptop tune-ups, and basic troubleshooting near LSU.
           Quick help. Fair prices. No stress.
         </p>
-        <a href="#" class="button large">See Services</a>
-        <a href="#" class="button large hollow">Contact Us</a>
+        <a href="#services" class="button large primary">See Services</a>
+        <a href="#contact" class="button large hollow">Contact Us</a>
       </div>
     </div>
 
-    <div class="row">
+    <!-- About -->
+    <div class="row" id="about">
       <div class="medium-6 columns medium-push-6">
-        <img class="thumbnail" src="https://placehold.it/750x350">
+        <div class="thumb">
+          <img
+            src="https://picsum.photos/id/180/900/520"
+            alt="Laptop repair and troubleshooting">
+        </div>
       </div>
       <div class="medium-6 columns medium-pull-6">
         <h2>Fast, friendly tech support.</h2>
+        <div class="accent-bar" style="max-width:240px;"></div>
         <p>
           Need a quick fix before class? We help with common issues like Wi-Fi
           connection problems, slow laptops, software installs, and basic setup.
           Simple, straightforward help you can actually understand.
         </p>
+        <p style="margin-bottom:0;">
+          <strong>Typical turnaround:</strong> same day or next day for most fixes.
+        </p>
       </div>
     </div>
 
-    <div class="row">
+    <br>
+
+    <!-- Services -->
+    <div class="row" id="services">
       <div class="medium-4 columns">
         <h3>Wi-Fi & Network Setup</h3>
+        <div class="thumb" style="margin-bottom:.75rem;">
+          <img
+            src="https://picsum.photos/id/1048/900/620"
+            alt="Wi-Fi and network setup">
+        </div>
         <p>
           Get your laptop or phone connected fast. We’ll troubleshoot connection
           issues and help you set up a clean, reliable network.
         </p>
       </div>
+
       <div class="medium-4 columns">
         <h3>Laptop & Software Help</h3>
+        <div class="thumb" style="margin-bottom:.75rem;">
+          <img
+            src="https://picsum.photos/id/0/900/620"
+            alt="Laptop and software support">
+        </div>
         <p>
           Slow computer? Pop-ups? Apps not working? We can diagnose the problem,
           clean things up, and help you get back to normal.
         </p>
       </div>
+
       <div class="medium-4 columns">
         <h3>Basic Tech Training</h3>
+        <div class="thumb" style="margin-bottom:.75rem;">
+          <img
+            src="https://picsum.photos/id/1025/900/620"
+            alt="Basic tech training and guidance">
+        </div>
         <p>
           Quick walkthroughs for the basics—file organization, backups, updates,
           and simple habits that keep your stuff running smoothly.
@@ -79,58 +219,87 @@
 
     <hr>
 
+    <!-- Stats -->
     <div class="row column">
-      <ul class="vertical medium-horizontal menu expanded text-center">
-        <li><a href="#"><div class="stat">120+</div><span>Sessions</span></a></li>
-        <li><a href="#"><div class="stat">35+</div><span>Students</span></a></li>
-        <li><a href="#"><div class="stat">4.8/5</div><span>Rating</span></a></li>
-        <li><a href="#"><div class="stat">Same Day</div><span>Help</span></a></li>
-        <li><a href="#"><div class="stat">Near LSU</div><span>Local</span></a></li>
-      </ul>
+      <div class="stats-wrap">
+        <ul class="vertical medium-horizontal menu expanded text-center">
+          <li><a href="#"><div class="stat">120+</div><span>Sessions</span></a></li>
+          <li><a href="#"><div class="stat">35+</div><span>Students</span></a></li>
+          <li><a href="#"><div class="stat">4.8/5</div><span>Rating</span></a></li>
+          <li><a href="#"><div class="stat">Same Day</div><span>Help</span></a></li>
+          <li><a href="#"><div class="stat">Near LSU</div><span>Local</span></a></li>
+        </ul>
+      </div>
     </div>
 
     <hr>
 
+    <!-- Recent Fixes Gallery -->
     <div class="row column">
       <h3>Recent Fixes</h3>
+      <div class="accent-bar" style="max-width:180px;"></div>
     </div>
 
     <div class="row medium-up-3 large-up-4">
-      <div class="column">
-        <img class="thumbnail" src="https://placehold.it/550x550">
-      </div>
-      <div class="column">
-        <img class="thumbnail" src="https://placehold.it/550x550">
-      </div>
-      <div class="column">
-        <img class="thumbnail" src="https://placehold.it/550x550">
-      </div>
-      <div class="column">
-        <img class="thumbnail" src="https://placehold.it/550x550">
-      </div>
-      <div class="column">
-        <img class="thumbnail" src="https://placehold.it/550x550">
-      </div>
-      <div class="column">
-        <img class="thumbnail" src="https://placehold.it/550x550">
-      </div>
-      <div class="column">
-        <img class="thumbnail" src="https://placehold.it/550x550">
-      </div>
-      <div class="column">
-        <img class="thumbnail" src="https://placehold.it/550x550">
-      </div>
-      <div class="column">
-        <img class="thumbnail" src="https://placehold.it/550x550">
-      </div>
-      <div class="column">
-        <img class="thumbnail" src="https://placehold.it/550x550">
-      </div>
-      <div class="column">
-        <img class="thumbnail" src="https://placehold.it/550x550">
-      </div>
-      <div class="column">
-        <img class="thumbnail" src="https://placehold.it/550x550">
+      <!-- Picsum images (reliable) -->
+      <div class="column"><div class="thumb"><img src="https://picsum.photos/id/201/700/700" alt="Recent fix 1"></div></div>
+      <div class="column"><div class="thumb"><img src="https://picsum.photos/id/225/700/700" alt="Recent fix 2"></div></div>
+      <div class="column"><div class="thumb"><img src="https://picsum.photos/id/241/700/700" alt="Recent fix 3"></div></div>
+      <div class="column"><div class="thumb"><img src="https://picsum.photos/id/250/700/700" alt="Recent fix 4"></div></div>
+
+      <div class="column"><div class="thumb"><img src="https://picsum.photos/id/270/700/700" alt="Recent fix 5"></div></div>
+      <div class="column"><div class="thumb"><img src="https://picsum.photos/id/299/700/700" alt="Recent fix 6"></div></div>
+      <div class="column"><div class="thumb"><img src="https://picsum.photos/id/314/700/700" alt="Recent fix 7"></div></div>
+      <div class="column"><div class="thumb"><img src="https://picsum.photos/id/321/700/700" alt="Recent fix 8"></div></div>
+    </div>
+
+    <hr>
+
+    <!-- Pricing + Contact -->
+    <div class="row" id="pricing">
+      <div class="medium-6 columns">
+        <h3>Simple Pricing</h3>
+        <div class="accent-bar" style="max-width:160px;"></div>
+        <ul>
+          <li><strong>Quick Help:</strong> 20–30 min (Wi-Fi, installs, setup)</li>
+          <li><strong>Standard Fix:</strong> cleanup, speed-up, app issues</li>
+          <li><strong>Training:</strong> 1-on-1 basics (backups, organization)</li>
+        </ul>
+        <p style="margin-bottom:0;">
+          Want it to look more “real”? Replace these with exact prices later.
+        </p>
       </div>
 
-      
+      <div class="medium-6 columns" id="contact">
+        <h3>Contact</h3>
+        <div class="accent-bar" style="max-width:110px;"></div>
+        <p>
+          Email: <a href="mailto:help@campustechhelp.com">help@campustechhelp.com</a><br>
+          Phone: <a href="tel:+12250000000">(225) 000-0000</a>
+        </p>
+        <p style="font-size:0.95rem; opacity:0.9;">
+          (You can update email/phone later — this is just a placeholder for class.)
+        </p>
+      </div>
+    </div>
+
+    <div class="row column footer text-center">
+      <p style="margin:0;">
+        <a href="#services">Services</a> •
+        <a href="#pricing">Pricing</a> •
+        <a href="#about">About</a> •
+        <a href="#contact">Contact</a>
+      </p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+    <script>
+      $(document).foundation();
+    </script>
+  </body>
+</html>
+
+
+
+
